@@ -4,8 +4,9 @@ import time
 
 currentDirectory = os.getcwd()
 subDirectories =  os.listdir(currentDirectory)
+subDirectories = [i for i in subDirectories if i == "DBMS" or i == "OS"]
 
-for i in subDirectories[1:-2]: #AltIntro, DBMS, OS, sem3.py
+for i in subDirectories[:]: #AltIntro, DBMS, Nhce_Logo.png, OS, sem3.py
     for j in os.listdir(i):
         mp4Split = j.split('.mp4')
         LabVidSplitList = mp4Split[0].split('_')
